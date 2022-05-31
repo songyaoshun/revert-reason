@@ -1,8 +1,8 @@
 ## urls:
-- a. r ---> rinkeby
-- b. a ---> arbitrum
-- c. b ---> bsctest
-- d. t ---> teleport testnet
-- e. q ---> teleport qanet
+- r ---> rinkeby
+- a ---> arbitrum
+- b ---> bsctest
+- t ---> teleport testnet
+- q ---> teleport qanet
 ## command
-- node index.js <urls> <tx_hash>
+- node index.js [urls] [tx_hash]
