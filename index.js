@@ -18,13 +18,18 @@ async function reason() {
     // console.log(await getRevertReason(args[1], network, blockNumber, provider))
 
     let url = args[0]
-    console.log('WEB3_URL:', web3.get(url))
+    console.log('WEB3_URL: ', web3.get(url))
     let provider = new ethers.providers.JsonRpcProvider(web3.get(url))
 
     let hash = args[1]
-    console.log('tx hash:', hash)
+    console.log('tx hash: ', hash)
 
     let tx = await provider.getTransaction(hash)
+    // console.log('tx: ',tx)
+
+    let receipt = await provider.getTransactionReceipt(hash)
+    // console.log('receipt: ',receipt)
+
     if (!tx) {
         console.log('tx not found')
     } else {
